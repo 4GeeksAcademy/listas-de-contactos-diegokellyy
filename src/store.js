@@ -24,7 +24,7 @@ export default function storeReducer(store, action = {}) {
 
       return {
         ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
+        todos: store.todos.map((Todo) => (Todo.id === id ? { ...Todo, background: color } : Todo))
       };
     default:
       throw Error('Unknown action.');
